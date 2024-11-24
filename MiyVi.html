@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión Y Visión</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .animated-div {
+            background-color: #001a2c;
+            padding: 30px;
+            color: white;
+            border-radius: 8px;
+            animation: pulse 2s infinite;
+            flex: 1 1 45%; /* Ajuste para que se alineen bien en pantallas pequeñas */
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .animated-div:nth-child(2) {
+            background-color:#001a2c;
+            animation-delay: 1s;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 450px;
+            height: 250px;
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
+            object-fit: cover;
+        }
+
+        .image-container:hover img {
+            max-height: 300px; /* Altura máxima para expandir */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+            }
+
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(192, 216, 233, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+            }
+        }
+
+        .animated-div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+    
+
+
+            /* Estilos para los encabezados h2 */
+        .h2s {
+            font-family: 'Cocomat Pro', sans-serif;
+            font-weight: bold;
+            font-size: 3rem;          /* Tamaño de fuente - puedes ajustar este valor */
+            color: #090832;           /* Color del texto - puedes usar cualquier color */
+        }
+
+        /* Estilos para los párrafos */
+        .ps {
+            font-family: 'Cocomat Pro', sans-serif;
+            font-weight: normal;
+            font-size: 1.5rem;          /* Tamaño de fuente para párrafos */
+            color: #001c5c;           /* Color del texto para párrafos */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <div class="nav-bar">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+    </div>
+    <br><br><br>
+    <br><br><br><br><br>
+    <!-- Cabecera -->
+    <div>
+        <h1 class="cinzel-font">Conócenos</h1>
+    </div>
+    <br>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="animated-div">
+            <div class="content">
+                <h2 class="h2s">Misión</h2>
+                <p class="ps">Diseñar, fabricar y comercializar circuitos electrónicos de alta calidad y confiabilidad que respondan a las necesidades de alimentación y control eléctrico de nuestros clientes en sectores como el industrial, educativo y profesional. Nos enfocamos en ofrecer innovación, eficiencia y soporte técnico especializado, fomentando soluciones sostenibles y tecnológicamente avanzadas.</p>
+            </div>
+            <div class="image-container">
+                <center><img src="MI.jpg" alt="Imagen 1"></center>
+            </div>
+        </div>
+
+        <div class="animated-div">
+            <div class="content">
+                <h2 class="h2s">Visión</h2>
+                <p class="ps">Para 2030, consolidarnos como la empresa líder en Latinoamérica en la creación y venta de circuitos electrónicos y fuentes de voltaje variable, destacando por nuestra capacidad de innovación, excelencia en el servicio al cliente y compromiso con el desarrollo de tecnologías energéticas sostenibles y accesibles.</p>
+            </div>
+            <div class="image-container">
+                <center><img src="Vi.jpg" alt="Imagen 2"></center>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br>
+    <!-- Pie de Página -->
+    <div class="footer">
+        <p>&copy; 2024 Innova. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

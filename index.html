@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet">
+</head>
+</head>
+
+
+
+
+<body>
+
+    <!-- Barra de Navegación -->
+    <div class="nav-bar">
+        <a href="productos.html">Productos</a>
+        <a href="MiyVi.html">Visión</a>
+    </div>
+    <br><br><br><br><br>
+
+    
+    <!-- Cabecera -->
+    <!-- Cabecera -->
+<!-- Cabecera -->
+<!-- Cabecera -->
+<div class="header">
+    <img src="Izq.jpg" alt="Imagen Izquierda">
+    <div>
+        <h1 class="cinzel-font">Innova Circuits </h1>
+        <p class="cinzelSUB">Expertos en circuitos de alta calidad y eficiencia</p>
+    </div>
+    <img src="Dere.jpg" alt="Imagen Derecha">
+</div>
+
+
+
+
+
+<br><br><br><br>
+    <img src="Inova.jpg" alt="200" height="200">
+
+
+
+
+    <!-- Cuerpo del Contenido -->
+    <div class="contenton">
+        <h2 class="h2s">¡Descubre nuestras innovaciones!</h2> 
+        <center><p class="pss">Ofrecemos soluciones tecnológicas de última generación.</p></center>
+        
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <!-- Añade las imágenes aquí -->
+                <img src="Ampli.jpg" alt="Imagen 1">
+                <img src="Tdigital.jpg" alt="Imagen 2">
+                <img src="Fpoder.jpg" alt="Imagen 3">
+            </div>
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <span onclick="goToSlide(0)" class="active"></span>
+                <span onclick="goToSlide(1)"></span>
+                <span onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".carousel-slide img");
+        const indicators = document.querySelectorAll(".carousel-indicators span");
+
+        function showSlide(index) {
+            currentIndex = index;
+            // Mover el carrusel
+            const slideWidth = slides[0].clientWidth;
+            document.querySelector(".carousel-slide").style.transform = `translateX(-${slideWidth * index}px)`;
+
+            // Actualizar indicadores
+            indicators.forEach(indicator => indicator.classList.remove("active"));
+            indicators[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Cambiar automáticamente cada 3 segundos
+        setInterval(nextSlide, 3000);
+
+        // Ir a una imagen específica
+        function goToSlide(index) {
+            showSlide(index);
+        }
+    </script>
+
+
+
+    <!-- Pie de Página -->
+    <div class="footer">
+        <p>&copy; 2024 Innova Circuits. Todos los derechos reservados.</p>
+    </div>
+
+</body>
+</html>
